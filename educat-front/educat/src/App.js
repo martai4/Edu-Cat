@@ -6,10 +6,13 @@ export class App extends React.Component{
     return (
       <div className="App">
           <div className='Cat'>
-            <img src="/educat_logo_no_background.png" className='caty'></img>
+            <img src="/educat_logo_no_background.png" className='cat'></img>
           </div>
-          <div className='Messages'>Text</div>
-          <div className='NextIcon'>Strzałka</div>
+            <div className='Messages'>Let’s talk about Your future!
+          </div>
+          <div className='NextIcon'>
+            <div class="arrow right"></div>
+          </div>
       </div>
     );
   }
