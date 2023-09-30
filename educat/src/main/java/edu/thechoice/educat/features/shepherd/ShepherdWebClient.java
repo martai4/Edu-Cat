@@ -3,13 +3,13 @@ package edu.thechoice.educat.features.shepherd;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.MultipartBodyBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.Optional;
@@ -31,12 +31,12 @@ public class ShepherdWebClient implements ShepherdClient {
     }
 
     @Override
-    public Optional<ResponseEntity<String>> analize() {
-        Optional<ResponseEntity<String>> response = webClient.post()
+    public PersonalityAnalysis analize(MultipartFile file) {
+        Optional<ResponseEntity<PersonalityAnalysis>> response = webClient.post()
                 .uri(url.concat(ROOFING_ENDPOINTS))
-                .bodyValue(wrapImage())
+                .bodyValue(wrapImage(file))
                 .retrieve()
-                .toEntity(String.class)
+                .toEntity(PersonalityAnalysis.class)
                 .blockOptional();
 
         response.orElseThrow();
@@ -45,12 +45,12 @@ public class ShepherdWebClient implements ShepherdClient {
             log.error("POST {} failed with status {}", ROOFING_ENDPOINTS, response.get().getStatusCode());
         }
 
-        return response;
+        return response.get().getBody();
     }
 
-    private MultiValueMap<String, HttpEntity<?>> wrapImage() {
+    private MultiValueMap<String, HttpEntity<?>> wrapImage(MultipartFile file) {
         MultipartBodyBuilder builder = new MultipartBodyBuilder();
-        builder.part("image", new FileSystemResource("C:/Users/MATki/Pictures/1b2.png"), MediaType.IMAGE_PNG);
+        builder.part("image", file.getResource(), MediaType.valueOf(Optional.ofNullable(file.getContentType()).orElseThrow()));
         return builder.build();
     }
 }
