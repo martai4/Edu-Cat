@@ -4,5 +4,7 @@
   }
 
 .DrawingSet{
+  margin-top: 10vh;
   border: solid 2px;
+  height: 600px; /* same value as canvas element */
 }

@@ -11,8 +11,8 @@
     margin: 40px;
     display: inline-block;
     position: relative;
-	width: 200px;
-	height: auto;
+    width: 200px;
+    height: auto;
     text-align: center;
     padding: 3% 3%;
     border-radius: 20 px;
@@ -26,9 +26,9 @@
 	position: absolute;
 	width: 0;
 	height: 0;
-    left: 40px;
+  left: 40px;
 	right: auto;
-    top: auto;
+  top: auto;
 	bottom: -40px;
 	border: 20px solid;
 	border-color: #39BDED transparent transparent #39BDED;
