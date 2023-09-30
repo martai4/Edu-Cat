@@ -7,10 +7,7 @@ import edu.thechoice.educat.features.database.domain.Category;
 import edu.thechoice.educat.features.database.domain.EducationChoice;
 import edu.thechoice.educat.features.recommender.Calculator;
 import edu.thechoice.educat.features.shepherd.ShepherdClient;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,8 +28,7 @@ public class RestApi {
     private final DatabaseService dbService;
     private final ShepherdClient client;
     @NoArgsConstructor
-    @Getter
-    @Setter
+    @Data
     public static class  Container <Key, Value>{
         private Map<Key, Value> map;
     }

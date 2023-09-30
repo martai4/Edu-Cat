@@ -6,12 +6,12 @@ public interface ShepherdClient {
 
     PersonalityAnalysis analize(MultipartFile file);
 
-    public record PersonalityAnalysis (
+    record PersonalityAnalysis (
             float artistic,
-            float conventional,
-            float enterprising,
-            float investigative,
-            float realistic,
+            float conventional, // konkretny
+            float enterprising, // przedsiębiorczy
+            float investigative, // dociekliwy
+            float realistic, // realista
             float social
     ) {}
 }
