@@ -1,4 +1,4 @@
-from cv2 import Mat
+from numpy import ndarray
 
 class Holands:
     def __init__(self, artistic: float, conventional: float, enterprising: float, investigative: float,
@@ -14,5 +14,5 @@ class DrawingClassificator:
     def __init__(self):
         pass
 
-    def classify(self, img: Mat):
+    def classify(self, img: ndarray):
         return Holands(1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
