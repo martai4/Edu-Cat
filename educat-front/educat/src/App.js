@@ -2,16 +2,15 @@ import './App.css';
 import React from 'react';
 import { NextIcon } from './NextIcon';
 import Cat from './Cat';
+import { Messages } from './Messages';
 
 export class App extends React.Component{
   render(){
     return (
       <div className="App">
           <Cat></Cat>
-            <div className='Messages'>
-              <div className='Bubble'>Let’s talk about Your future!</div>
-            </div>
-          <NextIcon redirect='/a'></NextIcon>
+          <Messages text='Let’s talk about Your future!'></Messages>
+          <NextIcon redirect='/choices'></NextIcon>
       </div>
     );
   }
