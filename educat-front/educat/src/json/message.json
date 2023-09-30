@@ -1,0 +1,242 @@
+[
+    {
+        "collage": "Poznan University of Technology",
+        "city": "Poznan",
+        "ranking": 80,
+        "category": "TECHNICAL",
+        "fieldOfStudy": "Computer Science",
+        "score": 74
+    },
+    {
+        "collage": "UAM",
+        "city": "Poznan",
+        "ranking": 65,
+        "category": "MEDICAL",
+        "fieldOfStudy": "Computer Science",
+        "score": 62
+    },
+    {
+        "collage": "Some College",
+        "city": "Some City",
+        "ranking": 75,
+        "category": "SCIENCE",
+        "fieldOfStudy": "Mathematics",
+        "score": 69
+    },
+    {
+        "collage": "Another College",
+        "city": "Another City",
+        "ranking": 90,
+        "category": "HUMANIST",
+        "fieldOfStudy": "Physics",
+        "score": 84
+    },
+    {
+        "collage": "XYZ University",
+        "city": "XYZ City",
+        "ranking": 70,
+        "category": "SOCIAL",
+        "fieldOfStudy": "Engineering",
+        "score": 72
+    },
+    {
+        "collage": "ABC College",
+        "city": "ABC City",
+        "ranking": 85,
+        "category": "TECHNICAL",
+        "fieldOfStudy": "Biology",
+        "score": 79
+    },
+    {
+        "collage": "DEF Institute",
+        "city": "DEF City",
+        "ranking": 78,
+        "category": "MEDICAL",
+        "fieldOfStudy": "Chemistry",
+        "score": 75
+    },
+    {
+        "collage": "GHI University",
+        "city": "GHI City",
+        "ranking": 88,
+        "category": "SCIENCE",
+        "fieldOfStudy": "Psychology",
+        "score": 82
+    },
+    {
+        "collage": "JKL College",
+        "city": "JKL City",
+        "ranking": 92,
+        "category": "HUMANIST",
+        "fieldOfStudy": "Economics",
+        "score": 86
+    },
+    {
+        "collage": "MNO Institute",
+        "city": "MNO City",
+        "ranking": 68,
+        "category": "ENVIRONMENTAL",
+        "fieldOfStudy": "History",
+        "score": 66
+    },
+    {
+        "collage": "University X",
+        "city": "City X",
+        "ranking": 79,
+        "category": "TECHNICAL",
+        "fieldOfStudy": "Sociology",
+        "score": 73
+    },
+    {
+        "collage": "College Y",
+        "city": "City Y",
+        "ranking": 77,
+        "category": "MEDICAL",
+        "fieldOfStudy": "Political Science",
+        "score": 74
+    },
+    {
+        "collage": "University Z",
+        "city": "City Z",
+        "ranking": 86,
+        "category": "SCIENCE",
+        "fieldOfStudy": "English Literature",
+        "score": 80
+    },
+    {
+        "collage": "City College",
+        "city": "City A",
+        "ranking": 91,
+        "category": "HUMANIST",
+        "fieldOfStudy": "Geology",
+        "score": 85
+    },
+    {
+        "collage": "Town University",
+        "city": "City B",
+        "ranking": 73,
+        "category": "SOCIAL",
+        "fieldOfStudy": "Art History",
+        "score": 75
+    },
+    {
+        "collage": "County College",
+        "city": "City C",
+        "ranking": 82,
+        "category": "TECHNICAL",
+        "fieldOfStudy": "Environmental Science",
+        "score": 76
+    },
+    {
+        "collage": "State Institute",
+        "city": "City D",
+        "ranking": 75,
+        "category": "MEDICAL",
+        "fieldOfStudy": "Music",
+        "score": 72
+    },
+    {
+        "collage": "National University",
+        "city": "City E",
+        "ranking": 87,
+        "category": "SCIENCE",
+        "fieldOfStudy": "Drama",
+        "score": 81
+    },
+    {
+        "collage": "Private College",
+        "city": "City F",
+        "ranking": 89,
+        "category": "HUMANIST",
+        "fieldOfStudy": "Film Studies",
+        "score": 83
+    },
+    {
+        "collage": "Public Institute",
+        "city": "City G",
+        "ranking": 71,
+        "category": "ENVIRONMENTAL",
+        "fieldOfStudy": "Philosophy",
+        "score": 69
+    },
+    {
+        "collage": "Technical College",
+        "city": "City H",
+        "ranking": 83,
+        "category": "TECHNICAL",
+        "fieldOfStudy": "Astronomy",
+        "score": 77
+    },
+    {
+        "collage": "Arts University",
+        "city": "City I",
+        "ranking": 76,
+        "category": "MEDICAL",
+        "fieldOfStudy": "Anthropology",
+        "score": 73
+    },
+    {
+        "collage": "Science College",
+        "city": "City J",
+        "ranking": 84,
+        "category": "SCIENCE",
+        "fieldOfStudy": "Linguistics",
+        "score": 78
+    },
+    {
+        "collage": "Business School",
+        "city": "City K",
+        "ranking": 93,
+        "category": "HUMANIST",
+        "fieldOfStudy": "Marketing",
+        "score": 87
+    },
+    {
+        "collage": "Law University",
+        "city": "City L",
+        "ranking": 67,
+        "category": "SOCIAL",
+        "fieldOfStudy": "Criminal Justice",
+        "score": 69
+    },
+    {
+        "collage": "Medical College",
+        "city": "City M",
+        "ranking": 81,
+        "category": "TECHNICAL",
+        "fieldOfStudy": "Nursing",
+        "score": 75
+    },
+    {
+        "collage": "Design Institute",
+        "city": "City N",
+        "ranking": 74,
+        "category": "MEDICAL",
+        "fieldOfStudy": "Graphic Design",
+        "score": 71
+    },
+    {
+        "collage": "Fine Arts College",
+        "city": "City O",
+        "ranking": 90,
+        "category": "SCIENCE",
+        "fieldOfStudy": "Dance",
+        "score": 84
+    },
+    {
+        "collage": "Engineering University",
+        "city": "City P",
+        "ranking": 94,
+        "category": "HUMANIST",
+        "fieldOfStudy": "Civil Engineering",
+        "score": 88
+    },
+    {
+        "collage": "Last College",
+        "city": "Last City",
+        "ranking": 70,
+        "category": "ENVIRONMENTAL",
+        "fieldOfStudy": "History",
+        "score": 68
+    }
+]
