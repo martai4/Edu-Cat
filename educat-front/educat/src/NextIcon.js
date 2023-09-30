@@ -3,16 +3,15 @@ import React from 'react';
 import {Link } from 'react-router-dom';
 
 export class NextIcon extends React.Component{
-
   render(){
-    return (
-
+      return (
           <div className='NextIcon'>
-            <Link to = {this.props.redirect}><div class="arrow right"></div></Link>
+              {this.props.redirect && <Link to={this.props.redirect}><div className="arrow right"></div></Link>}
           </div>
-    );
+      );
   }
-  
 }
+
+
 
 export default NextIcon;

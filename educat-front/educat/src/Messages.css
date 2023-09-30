@@ -1,0 +1,35 @@
+  .Messages {
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+.Bubble {
+    background-color: #39BDED;
+    border-radius: 15px 30px;
+    margin: 40px;
+    display: inline-block;
+    position: relative;
+	width: 200px;
+	height: auto;
+    text-align: center;
+    padding: 3% 3%;
+    border-radius: 20 px;
+    color: white;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Bubble::after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: 40px;
+	right: auto;
+    top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #39BDED transparent transparent #39BDED;
+}

@@ -12,6 +12,7 @@ public class EducationChoice {
     private Integer ranking;
     private Category category;
     private String fieldOfStudy;
+    private int score = 0;
 
     public static EducationChoice from(EducationChoiceEntity entity) {
         return EducationChoice.builder()

@@ -1,0 +1,8 @@
+.Drawing {
+    display: flex;
+    height: 80vh;
+  }
+
+.DrawingSet{
+  border: solid 2px;
+}
