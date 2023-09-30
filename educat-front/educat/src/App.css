@@ -3,44 +3,13 @@
     height: 80vh;
   }
   
-  .Cat {
-    flex: 2;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .cat{
-    height: 40vh;
-  }
-  
   .Messages {
     flex: 10;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
   }
 
-  .NextIcon{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-right: 15px;
-
-  }
-
-  .arrow {
-    border: solid #ed933a;
-    border-width: 0 15px 15px 0;
-    display: inline-block;
-    padding: 15px; 
-    border-radius: 20%;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
 .Bubble {
     background-color: #39BDED;
     border-radius: 15px 30px;
@@ -52,26 +21,10 @@
     text-align: center;
     padding: 3% 3%;
     border-radius: 20 px;
+    color: white;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.border{
-    border: 8px solid  red;
-  }
-
-/* .Bubble::after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-  left: -20px;
-	right: auto;
-  top: auto;
-	bottom: -200 px;
-	border: 30px solid;
-	border-color: #39BDED transparent transparent transparent;
-} */
 
 .Bubble::after {
 	content: ' ';

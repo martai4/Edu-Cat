@@ -1,18 +1,17 @@
 import './App.css';
 import React from 'react';
+import { NextIcon } from './NextIcon';
+import Cat from './Cat';
 
 export class App extends React.Component{
   render(){
     return (
       <div className="App">
-          <div className='Cat'>
-            <img src="/educat_logo_no_background.png" className='cat'></img>
-          </div>
-            <div className='Messages'>Let’s talk about Your future!
-          </div>
-          <div className='NextIcon'>
-            <div class="arrow right"></div>
-          </div>
+          <Cat></Cat>
+            <div className='Messages'>
+              <div className='Bubble'>Let’s talk about Your future!</div>
+            </div>
+          <NextIcon redirect='/a'></NextIcon>
       </div>
     );
   }
