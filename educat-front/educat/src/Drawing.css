@@ -3,8 +3,13 @@
     height: 80vh;
   }
 
-.DrawingSet{
-  margin-top: 10vh;
-  border: solid 2px;
-  height: 600px; /* same value as canvas element */
-}
+  .DrawingSet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px;
+    margin: 10px;
+    flex: 10;
+  }
+  
+
