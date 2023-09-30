@@ -6,6 +6,9 @@ from drawingClassification import DrawingClassificator
 app = FastAPI()
 
 classificator = DrawingClassificator()
+@app.get("/")
+async def helloWorld():
+    return "Hello World!"
 
 @app.post("/image/")
 async def showImage(image : UploadFile):
@@ -20,4 +23,4 @@ async def showImage(image : UploadFile):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=5000, log_level="info")
+    uvicorn.run("main:app",host="0.0.0.0", proxy_headers=True, port=5000, log_level="info")

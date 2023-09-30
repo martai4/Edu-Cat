@@ -11,4 +11,5 @@ COPY HomelessModel.zip.002 HomelessModel.zip.002
 COPY HomelessModel.zip.003 HomelessModel.zip.003
 RUN cat HomelessModel.zip* > HomelessModel.zip
 RUN unzip HomelessModel.zip
+EXPOSE 5000
 ENTRYPOINT ["python", "main.py"]
