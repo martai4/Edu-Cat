@@ -5,12 +5,14 @@ export class App extends React.Component{
   render(){
     return (
       <div className="App">
-        x
-        <div className='Bubble'> 
-        In the menu bar, in the "For you" tab, you can find useful articles and information about available fields of study at Polish universities.
-
-        </div>
-        
+          <div className='Cat'>
+            <img src="/educat_logo_no_background.png" className='cat'></img>
+          </div>
+            <div className='Messages'>Let’s talk about Your future!
+          </div>
+          <div className='NextIcon'>
+            <div class="arrow right"></div>
+          </div>
       </div>
     );
   }

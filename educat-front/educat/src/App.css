@@ -1,3 +1,46 @@
+.App {
+    display: flex;
+    height: 80vh;
+  }
+  
+  .Cat {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .cat{
+    height: 40vh;
+  }
+  
+  .Messages {
+    flex: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .NextIcon{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 15px;
+
+  }
+
+  .arrow {
+    border: solid #ed933a;
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+    padding: 15px; 
+    border-radius: 20%;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
 .Bubble {
     background-color: #39BDED;
     border-radius: 15px 30px;
