@@ -1,4 +1,5 @@
 from numpy import ndarray
+from tensorflow import keras
 
 class Holands:
     def __init__(self, artistic: float, conventional: float, enterprising: float, investigative: float,
@@ -12,7 +13,8 @@ class Holands:
 
 class DrawingClassificator:
     def __init__(self):
+        self.model = keras.models.load_model('HomelessModel')
         pass
 
     def classify(self, img: ndarray):
-        return Holands(1.0, 1.0, 1.0, 1.0, 1.0, 1.0)
+        return self.model.predict(ndarray.reshape(1, 192, 320, 3))
