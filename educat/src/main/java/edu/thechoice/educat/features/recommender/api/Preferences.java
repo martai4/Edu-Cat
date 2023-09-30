@@ -17,18 +17,6 @@ import java.util.Map;
 @Getter
 @NoArgsConstructor
 public class Preferences {
-//    //    Study categories, 0-5
-//    private final Integer humanistic;
-//    private final Integer theology;
-//    private final Integer economic;
-//    private final Integer medical;
-//    private final Integer nature;
-//    //   rolnicze,lesne, weterynaryjne
-//    private final Integer environment;
-//    //   spoleczne
-//    private final Integer socialStudies;
-//    private final Integer technical;
-//    private final Integer science;
     private Map<Category, Integer> userPreferences;
 
     public void fillEmpty(){
