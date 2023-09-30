@@ -2,3 +2,8 @@
     display: flex;
     height: 80vh;
   }
+.Sliders{
+  display: flex;
+  flex-direction: column;
+}
+
