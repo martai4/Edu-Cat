@@ -1,0 +1,18 @@
+.Header{
+    background-color: #39BDED;
+    height: 10vh;
+}
+@font-face {
+    font-family: 'aliens';
+    src: local('aliens and cows_trial'), url('./fonts/aliensAndCows_trial.ttf') format('truetype');
+  }
+
+.Page-Title{
+    color: white;
+    font-family: 'aliens';
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
