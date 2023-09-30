@@ -7,6 +7,7 @@ import edu.thechoice.educat.features.database.domain.Category;
 import edu.thechoice.educat.features.database.domain.EducationChoice;
 import edu.thechoice.educat.features.recommender.Calculator;
 import edu.thechoice.educat.features.shepherd.ShepherdClient;
+import edu.thechoice.educat.features.shepherd.TestClient;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
@@ -26,7 +27,7 @@ import java.util.Map;
 public class RestApi {
 
     private final DatabaseService dbService;
-    private final ShepherdClient client;
+    private final ShepherdClient client = new TestClient();
     @NoArgsConstructor
     @Data
     public static class  Container <Key, Value>{
@@ -43,7 +44,7 @@ public class RestApi {
         Map<Category, Integer> preference = pref.get("userPreferences");
 
         for (Category cat: Category.values()){
-            preference.computeIfAbsent(cat, category -> {return 1;});
+            preference.putIfAbsent(cat, 1);
         }
         ShepherdClient.PersonalityAnalysis personality = client.analize(image);
 
@@ -52,6 +53,5 @@ public class RestApi {
         Calculator calc = new Calculator(dbService);
         calc.calculatePreferences(faculties, preference, personality);
         return faculties;
-//        return null;
     }
 }
