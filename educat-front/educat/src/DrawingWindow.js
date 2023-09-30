@@ -30,13 +30,15 @@ class DrawingWindow extends React.Component {
 
   finishDrawing = () => {
     this.drawing = false;
-
-    // console.log(this.canvasRef.current.parentElement.clientHeight)
-    // console.log(this.canvasRef.current.parentElement.clientWidth)
   };
 
   componentDidMount() {
     const canvas = this.canvasRef.current;
+    
+    // Set the width and height of the canvas to match its parent
+    canvas.width = canvas.parentElement.offsetWidth;
+    canvas.height = canvas.parentElement.offsetHeight;
+
     canvas.addEventListener('mousedown', this.startDrawing);
     canvas.addEventListener('mousemove', this.draw);
     canvas.addEventListener('mouseup', this.finishDrawing);
@@ -50,7 +52,7 @@ class DrawingWindow extends React.Component {
   }
 
   render() {
-    return <canvas ref={this.canvasRef} width={800} height={600} />;
+    return <canvas ref={this.canvasRef} />;
   }
 }
 
