@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DatabaseService {
-    DatabaseRepository repository;
+    private final DatabaseRepository repository;
 
     @Autowired
     public DatabaseService(DatabaseRepository repository) {
