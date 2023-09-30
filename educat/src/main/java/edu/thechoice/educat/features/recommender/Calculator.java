@@ -3,8 +3,6 @@ package edu.thechoice.educat.features.recommender;
 import edu.thechoice.educat.features.database.DatabaseService;
 import edu.thechoice.educat.features.database.domain.Category;
 import edu.thechoice.educat.features.database.domain.EducationChoice;
-import edu.thechoice.educat.features.recommender.api.PersonalityTransfer;
-import edu.thechoice.educat.features.recommender.api.Preferences;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

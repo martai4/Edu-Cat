@@ -36,16 +36,16 @@ public class RestApi {
     @PostMapping(value = "/discover", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<EducationChoice> discoverFieldOfStudies(@RequestBody Map<String, Map<String, Integer>> json){
         Map<String, Integer> pref = json.get("userPreferences");
-        Map<String, Integer> per = json.get("personality");
+//        Map<String, Integer> per = json.get("personality");
         Map<Category, Integer> preference = new HashMap<>();
         Map<Personality, Integer> personality = new HashMap<>();
         for (String key: pref.keySet()){
             preference.put(Category.valueOf(key), pref.get(key));
         }
-        for(String key: per.keySet()){
-            personality.put(Personality.valueOf(key), per.get(key));
-        }
-        per.clear();
+//        for(String key: per.keySet()){
+//            personality.put(Personality.valueOf(key), per.get(key));
+//        }
+//        per.clear();
         pref.clear();
 
 
