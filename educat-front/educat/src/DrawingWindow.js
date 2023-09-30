@@ -7,7 +7,7 @@ class DrawingWindow extends React.Component {
     this.drawing = false;
   }
 
-  startDrawing = (e) => {
+  startDrawing = () => {
     const canvas = this.canvasRef.current;
     const ctx = canvas.getContext('2d');
     ctx.beginPath();
@@ -30,6 +30,9 @@ class DrawingWindow extends React.Component {
 
   finishDrawing = () => {
     this.drawing = false;
+
+    // console.log(this.canvasRef.current.parentElement.clientHeight)
+    // console.log(this.canvasRef.current.parentElement.clientWidth)
   };
 
   componentDidMount() {
@@ -47,7 +50,7 @@ class DrawingWindow extends React.Component {
   }
 
   render() {
-    return <canvas ref={this.canvasRef} style={{ width: '100%', height: '100%' }} />;
+    return <canvas ref={this.canvasRef} width={800} height={600} />;
   }
 }
 
