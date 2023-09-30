@@ -1,5 +1,4 @@
 FROM tensorflow/tensorflow:latest
-VOLUME ["HomelessModel", "/usr/HomelessModel"]
 RUN pip install uvicorn
 RUN pip install fastapi
 # Workdir
