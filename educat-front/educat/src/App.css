@@ -1,0 +1,43 @@
+/* .App{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.Cat{
+    height: 40vh;
+    flex:2;
+    display: flex;
+    align-items: flex-end;
+  justify-content: center;
+    /* display: flex;
+    align-items: flex-end; 
+} 
+*/
+.App {
+    display: flex;
+    height: 80vh;
+  }
+  
+  .Cat {
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .caty{
+    height: 40vh;
+  }
+  
+  .Messages {
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .NextIcon{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
