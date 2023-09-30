@@ -1,0 +1,10 @@
+.Text{
+    margin:3px;
+}
+.Sl{
+    margin:8px;
+}
+input{
+    min-width: 30vh;
+    min-height: 2vh;
+}
