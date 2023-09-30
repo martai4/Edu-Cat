@@ -1,11 +1,13 @@
 FROM tensorflow/tensorflow:latest
 RUN pip install uvicorn
 RUN pip install fastapi
-# Workdir
+RUN pip install gdown
+RUN pip install python-multipart
 WORKDIR /usr/
 COPY main.py main.py
 COPY drawingClassification.py drawingClassification.py
-RUN pip install gdown
-RUN gdown --folder https://drive.google.com/drive/folders/1cNRHRbwLW6PBErWaI-p7cLeb2FJfiNJ4?usp=drive_link
-# Run
+COPY HomelessModel.zip.001 HomelessModel.zip.001 
+COPY HomelessModel.zip.002 HomelessModel.zip.002
+COPY HomelessModel.zip.003 HomelessModel.zip.003
+RUN unzip HomelessModel.zip.001
 ENTRYPOINT ["python", "main.py"]
