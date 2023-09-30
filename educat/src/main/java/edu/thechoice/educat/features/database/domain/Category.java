@@ -6,8 +6,11 @@ import lombok.Getter;
 public enum Category {
     HUMANIST,
     THEOLOGICAL,
+    ECONOMICAL,
     MEDICAL,
+    NATURE,
     ENVIRONMENTAL,
+    SOCIAL,
     TECHNICAL,
-    STRICT
+    SCIENCE
 }
