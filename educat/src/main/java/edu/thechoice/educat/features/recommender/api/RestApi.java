@@ -19,8 +19,10 @@ public class RestApi {
     private final DatabaseService dbService;
     @PostMapping(value = "/discover", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<EducationChoice> discoverFieldOfStudies(@RequestBody Preferences userPrefs) {
+        userPrefs.fillEmpty();
         List<EducationChoice> faculties = dbService.getAll();
-        Calculator.calculatePreferences(faculties, userPrefs);
+        Calculator calc = new Calculator(dbService);
+        calc.calculatePreferences(faculties, userPrefs);
         return faculties;
     }
 }

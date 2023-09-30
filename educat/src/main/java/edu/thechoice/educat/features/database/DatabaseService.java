@@ -1,5 +1,6 @@
 package edu.thechoice.educat.features.database;
 
+import edu.thechoice.educat.features.database.domain.Category;
 import edu.thechoice.educat.features.database.domain.EducationChoice;
 import edu.thechoice.educat.features.database.entity.EducationChoiceEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,8 @@ public class DatabaseService {
                 returns.add(EducationChoice.from(e));
         }
         return returns;
+    }
+    public int categoryCount(Category cat){
+        return repository.countAllByCategory(cat.name());
     }
 }
