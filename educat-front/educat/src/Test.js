@@ -23,7 +23,6 @@ export class Test extends React.Component{
             <Slider text="Technic"></Slider>
             <Slider text="Science"></Slider>
           </div>
-          
           <NextIcon redirect='/drawing'></NextIcon>
       </div>
     );
