@@ -9,11 +9,15 @@ import lombok.Data;
 public class EducationChoice {
     private String city;
     private Integer ranking;
+    private Category category;
+    private String fieldOfStudy;
 
     public static EducationChoice from(EducationChoiceEntity entity) {
         return EducationChoice.builder()
                 .city(entity.getCity())
                 .ranking(entity.getRanking())
+                .category(entity.getCategory())
+                .fieldOfStudy(entity.getFieldOfStudy())
                 .build();
     }
 }
