@@ -19,7 +19,7 @@ async def showImage(image : UploadFile):
     if image.content_type.startswith("image/"):
         contents = await image.read()
         img = Image.open(io.BytesIO(contents))
-        img = img.resize((192, 320)).convert("RGB")
+        img = img.resize((192, 320), Image.NEAREST).convert("RGB")
         return classificator.classify(np.asarray(img, dtype="uint8"))
     else:
         raise HTTPException(status_code=415, detail="Unsupported Media Type: %s Looking for form-data with image/*".format(image.content_type))
