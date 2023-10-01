@@ -18,7 +18,7 @@ class Slider extends React.Component {
   render() {
     return (
       <div>
-        <div className='Text'>{this.props.text.replace(/ /g, '_')}</div>
+        <div className='Text'>{this.props.text}</div>
         
         <input className='Sl'
           type="range"
