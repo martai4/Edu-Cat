@@ -19,6 +19,7 @@ class Slider extends React.Component {
     return (
       <div>
         <div className='Text'>{this.props.text.replace(/ /g, '_')}</div>
+        
         <input className='Sl'
           type="range"
           min="0"
@@ -26,8 +27,12 @@ class Slider extends React.Component {
           value={this.state.value}
           onChange={this.handleChange}
         />
-        {this.state.value}/10
-      </div>
+        <div className='Sl_val'>
+        {this.state.value}/10 </div>
+        </div>
+        
+    
+      
     );
   }
 }

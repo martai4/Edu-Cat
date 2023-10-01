@@ -1,7 +1,7 @@
 .JsonData {
     border: solid 1px #0678A1; 
     padding: 5px;
-    width: 400px;
+    min-width: 400px;
     text-align: left;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,4 +9,17 @@
     
   }
 
+  .Text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  }
+
   .tb th, .tb td { border: solid 1px #0678A1; padding: 5px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+    background-color: #0678A1;
+    color: white;
+    padding: 5 px;
+  }

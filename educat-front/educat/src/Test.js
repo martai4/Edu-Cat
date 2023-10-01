@@ -11,7 +11,7 @@ export class Test extends React.Component{
     return (
       <div className="Test">
           <Cat></Cat>
-          <Messages text='What is interesting for you and how much?'></Messages>
+          <Messages text="In which fields Your particular intrests lay in? Remember that 0 goes for the field You're the least interested and 10 for the most interestings fields!"></Messages>
           <div className='Sliders'>
             <Slider text="Humanistic"></Slider>
             <Slider text="Teology"></Slider>
