@@ -4,12 +4,5 @@
   }
 
   .DrawingSet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: solid 2px;
-    margin: 10px;
-    flex: 10;
   }
-  
-
