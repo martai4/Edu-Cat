@@ -83,12 +83,6 @@ export class Drawing extends React.Component{
       <div className="Drawing">
         <Cat></Cat>
           <Messages text="Let's draw a house and its surroundings!"></Messages>          
-          <div className='CP'><CompactPicker 
-              color={this.state.color} 
-              onChange={this.handleColorChange} 
-              style={{ display: "flex"}}
-            /></div>
-            
           <div style={{ display: 'flex', width:'100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{display: 'flex', height:'100%', alignItems: 'center'}}>
               <div className='DrawingSet' style={{width:640, height:384}}>
@@ -96,6 +90,11 @@ export class Drawing extends React.Component{
                 <input type="file" id="image-upload" accept="image/png" style={{ marginLeft: -3, paddingBottom: 2 }} />
               </div>
             </div>
+            <div className='CP'><CompactPicker 
+              color={this.state.color} 
+              onChange={this.handleColorChange} 
+              style={{ display: "flex", alignItems: 'flexStart' }}
+            /></div>
           </div>
 
           <div style={{ flex: 1, display: 'flex' }} onClick={this.sendBack}>
