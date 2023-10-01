@@ -11,9 +11,9 @@ export class Drawing extends React.Component{
   constructor(props) {
     super(props);
     this.canvasRef = React.createRef();
-    // this.sendBack = this.sendBack.bind(this);
+    this.sendBack = this.sendBack.bind(this);
     this.state = {
-      color: '#000000',
+      color: '#000000'
     }
   }
   handleColorChange = (color) => {
@@ -42,11 +42,11 @@ export class Drawing extends React.Component{
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
-      .then(data => {
-          console.log(data);
-        }
-      );
+    .then(
+      response => response.json()
+      )
+      .then(response => console.log(response))
+      .then(response => Cookies.set('data',response.json()));
   }
     else{
       var canvas = document.getElementById("houseDraw");
@@ -71,10 +71,11 @@ export class Drawing extends React.Component{
           method: 'POST',
           body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-          console.log(data);
-        });
+        .then(
+          response => response.json()
+          )
+          .then(response => console.log(response))
+          .then(response => Cookies.set('data',response.json()));
       }, 'image/png');
     }
   }
@@ -98,7 +99,7 @@ export class Drawing extends React.Component{
           </div>
 
           <div style={{ flex: 1, display: 'flex' }} onClick={this.sendBack}>
-            <NextIcon redirect='/results'></NextIcon>
+            <NextIcon redirect='/results' inData={this.state.inData}></NextIcon>
           </div>
           
       </div>

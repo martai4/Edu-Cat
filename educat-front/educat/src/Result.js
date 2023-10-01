@@ -4,19 +4,24 @@ import NextIcon from './NextIcon';
 import './Result.css';
 import React from 'react';
 import JsonData from './json/message.json';
+import Cookies from 'js-cookie';
 import JsonDataDisplay from './JsonData';
 // import $ from jQuery;
 
 export class Result extends React.Component{
   render(){
+    let data = JSON.parse(Cookies.get('myData'));
     return (
       <div className="Result">
-          <Cat></Cat>
-          <Messages text="Look at our recommendation."></Messages>
-          <JsonDataDisplay></JsonDataDisplay>
-          <NextIcon></NextIcon>
+        {/* {data.map(item => <p>{item.collage}</p>)} */}
+        {data}
+        <Cat></Cat>
+        <Messages text="Look at our recommendation."></Messages>
+        <JsonDataDisplay></JsonDataDisplay>
+        <NextIcon></NextIcon>
       </div>
     );
   }
 }
+
 export default Result;
