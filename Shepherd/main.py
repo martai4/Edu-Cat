@@ -1,6 +1,8 @@
 import uvicorn
 from fastapi import FastAPI, UploadFile, HTTPException
 import numpy as np
+from PIL import Image
+import io
 from drawingClassification import DrawingClassificator
 
 app = FastAPI()
@@ -16,8 +18,8 @@ async def showImage(image : UploadFile):
         raise HTTPException(status_code=400, detail="Bad Request: Image not provided")
     if image.content_type.startswith("image/"):
         contents = await image.read()
-        nparr = np.fromstring(contents, np.uint8)
-        return classificator.classify(nparr)
+        img = Image.open(io.BytesIO(contents))
+        return classificator.classify(np.asarray(img, dtype="uint8"))
     else:
         raise HTTPException(status_code=415, detail="Unsupported Media Type: %s Looking for form-data with image/*".format(image.content_type))
 
