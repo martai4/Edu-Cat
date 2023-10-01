@@ -54,7 +54,7 @@ class JsonDataDisplay extends React.Component {
     return (
       <div>
         <div>
-          {/* <label className='Text'>Filter by City:</label>
+          <label className='Text'>Filter by City:</label>
           <select
             onChange={(e) => this.handleCityFilter(e.target.value)}
             value={cityFilter}
@@ -65,7 +65,7 @@ class JsonDataDisplay extends React.Component {
                 {city}
               </option>
             ))}
-            </select> */}
+          </select>
         </div>
         <table className="tb">
           <thead>
