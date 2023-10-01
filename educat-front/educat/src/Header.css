@@ -1,6 +1,7 @@
 .Header{
     background-color: #39BDED;
     height: 10vh;
+    min-height: 57px;
 }
 @font-face {
     font-family: 'aliens';
