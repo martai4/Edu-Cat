@@ -8,9 +8,6 @@ from drawingClassification import DrawingClassificator
 app = FastAPI()
 
 classificator = DrawingClassificator()
-@app.get("/")
-async def helloWorld():
-    return "Hello World!"
 
 @app.post("/image/")
 async def showImage(image : UploadFile):
