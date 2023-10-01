@@ -22,7 +22,7 @@ class DrawingWindow extends React.Component {
     const y = e.clientY - rect.top;
     ctx.lineWidth = 5;
     ctx.lineCap = 'round';
-    ctx.strokeStyle = '#000000';
+    ctx.strokeStyle = this.props.color; // Use the color prop here
     ctx.lineTo(x, y);
     ctx.stroke();
   };
@@ -55,4 +55,3 @@ class DrawingWindow extends React.Component {
 }
 
 export default DrawingWindow;
-
