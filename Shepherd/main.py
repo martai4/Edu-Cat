@@ -1,12 +1,16 @@
 import uvicorn
 from fastapi import FastAPI, UploadFile, HTTPException
-import cv2
 import numpy as np
+from PIL import Image
+import io
 from drawingClassification import DrawingClassificator
 
 app = FastAPI()
 
 classificator = DrawingClassificator()
+@app.get("/")
+async def helloWorld():
+    return "Hello World!"
 
 @app.post("/image/")
 async def showImage(image : UploadFile):
@@ -14,12 +18,11 @@ async def showImage(image : UploadFile):
         raise HTTPException(status_code=400, detail="Bad Request: Image not provided")
     if image.content_type.startswith("image/"):
         contents = await image.read()
-        nparr = np.fromstring(contents, np.uint8)
-        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-        return classificator.classify(img)
+        img = Image.open(io.BytesIO(contents))
+        return classificator.classify(np.asarray(img, dtype="uint8"))
     else:
         raise HTTPException(status_code=415, detail="Unsupported Media Type: %s Looking for form-data with image/*".format(image.content_type))
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=5000, log_level="info")
+    uvicorn.run("main:app",host="0.0.0.0", proxy_headers=True, port=5000, log_level="info")
