@@ -44,7 +44,7 @@ input{
     border-radius: 100%;
   }
   
-  .Sl:-moz-range-thumb {
+  .Sl::-moz-range-thumb {
     width: 25px; 
     height: 25px; 
     background: #0678A1; 
