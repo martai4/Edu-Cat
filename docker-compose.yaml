@@ -1,0 +1,30 @@
+version: '3'
+services:
+  backend:
+    build: /educat
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+      - shepherd
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  shepherd:
+    build: /Shepherd
+    ports:
+      - "5000:5000"
+  frontend:
+    build: /educat-front/educat
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  db-data:
