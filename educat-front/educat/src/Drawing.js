@@ -5,13 +5,20 @@ import './Drawing.css';
 import React from 'react';
 import DrawingWindow from './DrawingWindow';
 import Cookies from 'js-cookie';
+import { CompactPicker } from 'react-color';
 
 export class Drawing extends React.Component{
   constructor(props) {
     super(props);
     this.canvasRef = React.createRef();
     // this.sendBack = this.sendBack.bind(this);
+    this.state = {
+      color: '#000000',
+    }
   }
+  handleColorChange = (color) => {
+    this.setState({ color: color.hex });
+  };
 
   sendBack(){
     let formData = new FormData();
@@ -75,15 +82,21 @@ export class Drawing extends React.Component{
     return (
       <div className="Drawing">
         <Cat></Cat>
-          <Messages text="Let's draw a house and its surroundings!"></Messages>
+          <Messages text="Let's draw a house and its surroundings!"></Messages>          
           <div style={{ display: 'flex', width:'100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{display: 'flex', height:'100%', alignItems: 'center'}}>
               <div className='DrawingSet' style={{width:640, height:384}}>
-                <DrawingWindow style={{width:640, height:384}} canvasRef={this.canvasRef}></DrawingWindow>
+                <DrawingWindow style={{width:640, height:384}} canvasRef={this.canvasRef} color={this.state.color}></DrawingWindow>
                 <input type="file" id="image-upload" accept="image/png" style={{ marginLeft: -3, paddingBottom: 2 }} />
               </div>
             </div>
+            <div className='CP'><CompactPicker 
+              color={this.state.color} 
+              onChange={this.handleColorChange} 
+              style={{ display: "flex", alignItems: 'flexStart' }}
+            /></div>
           </div>
+
           <div style={{ flex: 1, display: 'flex' }} onClick={this.sendBack}>
             <NextIcon redirect='/results'></NextIcon>
           </div>

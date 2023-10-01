@@ -7,12 +7,13 @@ import edu.thechoice.educat.features.database.domain.Category;
 import edu.thechoice.educat.features.database.domain.EducationChoice;
 import edu.thechoice.educat.features.recommender.Calculator;
 import edu.thechoice.educat.features.shepherd.ShepherdClient;
-import edu.thechoice.educat.features.shepherd.TestClient;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
-import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,6 +31,7 @@ public class RestApi {
 
     private final DatabaseService dbService;
     @Autowired
+//    @Qualifier("test")
     private final ShepherdClient client;
     @NoArgsConstructor
     @Data

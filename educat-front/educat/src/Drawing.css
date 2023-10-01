@@ -8,3 +8,8 @@
   .DrawingSet {
     border: solid 2px;
   }
+
+ div:has(> input#rc-editable-input-2), div:has(> input#rc-editable-input-4), div:has(> input#rc-editable-input-6), div:has(> input#rc-editable-input-8), .flexbox-fix
+ {
+  display: none !important;
+ }
