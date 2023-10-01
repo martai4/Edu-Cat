@@ -12,7 +12,7 @@ services:
     environment:
       POSTGRES_PASSWORD: mysecretpassword
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - ./educat-docker:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
   shepherd:
@@ -26,5 +26,3 @@ services:
     depends_on:
       - backend
 
-volumes:
-  db-data:
