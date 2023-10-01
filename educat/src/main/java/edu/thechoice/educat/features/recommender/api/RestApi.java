@@ -10,7 +10,9 @@ import edu.thechoice.educat.features.shepherd.ShepherdClient;
 import edu.thechoice.educat.features.shepherd.TestClient;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +29,8 @@ import java.util.Map;
 public class RestApi {
 
     private final DatabaseService dbService;
-    private final ShepherdClient client = new TestClient();
+    @Autowired
+    private final ShepherdClient client;
     @NoArgsConstructor
     @Data
     public static class  Container <Key, Value>{
