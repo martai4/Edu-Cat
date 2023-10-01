@@ -46,7 +46,8 @@ export class Drawing extends React.Component{
       response => response.json()
       )
       .then(response => console.log(response))
-      .then(response => Cookies.set('data',response.json()));
+      .then(response => Cookies.set('data',response))
+      .then(response => console.log(Cookies.get('data')));
   }
     else{
       var canvas = document.getElementById("houseDraw");
@@ -75,7 +76,7 @@ export class Drawing extends React.Component{
           response => response.json()
           )
           .then(response => console.log(response))
-          .then(response => Cookies.set('data',response.json()));
+          .then(response => Cookies.set('data',response));
       }, 'image/png');
     }
   }

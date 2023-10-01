@@ -10,11 +10,10 @@ import JsonDataDisplay from './JsonData';
 
 export class Result extends React.Component{
   render(){
-    let data = JSON.parse(Cookies.get('myData'));
     return (
       <div className="Result">
         {/* {data.map(item => <p>{item.collage}</p>)} */}
-        {data}
+        {Cookies.get('data')}
         <Cat></Cat>
         <Messages text="Look at our recommendation."></Messages>
         <JsonDataDisplay></JsonDataDisplay>
