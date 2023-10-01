@@ -74,14 +74,18 @@ export class Drawing extends React.Component{
   render(){
     return (
       <div className="Drawing">
-          <Cat></Cat>
-          <Messages text="Let's draw house!"></Messages>
-          <div className='DrawingSet'><DrawingWindow canvasRef={this.canvasRef}></DrawingWindow></div>
-          <div onClick={this.sendBack}>
-            <NextIcon  redirect='/results'></NextIcon>
+        <Cat></Cat>
+          <Messages text="Let's draw a house and its surroundings!"></Messages>
+          <div style={{ display: 'flex', width:'100%', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{display: 'flex', height:'100%', alignItems: 'center'}}>
+              <div className='DrawingSet' style={{width:640, height:384}}>
+                <DrawingWindow style={{width:640, height:384}} canvasRef={this.canvasRef}></DrawingWindow>
+                <input type="file" id="image-upload" accept="image/png" style={{ marginLeft: -3, paddingBottom: 2 }} />
+              </div>
+            </div>
           </div>
-          <div>
-            <input type="file" id="image-upload" accept="image/png"></input>
+          <div style={{ flex: 1, display: 'flex' }} onClick={this.sendBack}>
+            <NextIcon redirect='/results'></NextIcon>
           </div>
           
       </div>

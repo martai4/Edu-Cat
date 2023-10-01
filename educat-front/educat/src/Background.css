@@ -1,0 +1,15 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ce090919, #c7bc2a19);
+  animation: backgroundAnimation 10s linear infinite;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
