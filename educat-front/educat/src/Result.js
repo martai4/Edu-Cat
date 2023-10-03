@@ -10,10 +10,18 @@ import JsonDataDisplay from './JsonData';
 
 export class Result extends React.Component{
   render(){
+     // Parse the string back into an object
+    // let jsonData = JSON.stringify(parsedData, null, 2); // Convert object to JSON string
+
     return (
       <div className="Result">
         {/* {data.map(item => <p>{item.collage}</p>)} */}
-        {Cookies.get('data')}
+        {/* <div>{data.map(item => <p>{item.collage}</p>)}</div> */}
+        {/* {parsedData.map(key => (
+          <div>
+            {key.collage}
+          </div>
+        ))} */}
         <Cat></Cat>
         <Messages text="Look at our recommendation."></Messages>
         <JsonDataDisplay></JsonDataDisplay>

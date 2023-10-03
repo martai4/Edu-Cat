@@ -41,13 +41,13 @@ export class Drawing extends React.Component{
     fetch('http://localhost:8080/discover', {
         method: 'POST',
         body: formData
-    })
+    })    
     .then(
       response => response.json()
       )
       .then(response => console.log(response))
-      .then(response => Cookies.set('data',response))
-      .then(response => console.log(Cookies.get('data')));
+      .then(response => sessionStorage.setItem("data", response))
+      .then(response => console.log(sessionStorage.getItem("data")));
   }
     else{
       var canvas = document.getElementById("houseDraw");
@@ -75,8 +75,8 @@ export class Drawing extends React.Component{
         .then(
           response => response.json()
           )
-          .then(response => console.log(response))
-          .then(response => Cookies.set('data',response));
+          .then(response => sessionStorage.setItem("data", JSON.stringify(response)));
+      
       }, 'image/png');
     }
   }

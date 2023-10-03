@@ -5,8 +5,11 @@ import './JsonData.css';
 class JsonDataDisplay extends React.Component {
   constructor(props) {
     super(props);
+    let data =sessionStorage.getItem("data");
+    let parsedData = JSON.parse(data);
+    parsedData.sort((a, b) => b.score - a.score);
     this.state = {
-      data: JsonData,
+      data: parsedData,
       sortBy: 'score', 
       cityFilter: '', 
       sortDescending: true,
@@ -44,6 +47,7 @@ class JsonDataDisplay extends React.Component {
   };
 
   render() {
+
     const { data, sortBy, sortDescending, cityFilter } = this.state;
     const citiesList = this.getCitiesList();
 
@@ -91,15 +95,15 @@ class JsonDataDisplay extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {filteredData.map((result, index) => (
+              {filteredData.map((result, index) => (
               <tr key={index}>
-                <td>{result.collage}</td>
-                <td>{result.city}</td>
-                <td>{result.ranking}</td>
-                <td>{result.category}</td>
-                <td>{result.fieldOfStudy}</td>
-                <td>{result.score}</td>
-              </tr>
+              <td>{result.collage}</td>
+              <td>{result.city}</td>
+              <td>{result.ranking}</td>
+              <td>{result.category}</td>
+              <td>{result.fieldOfStudy}</td>
+              <td>{result.score}</td>
+            </tr>
             ))}
           </tbody>
         </table>
