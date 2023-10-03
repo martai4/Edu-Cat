@@ -45,9 +45,7 @@ export class Drawing extends React.Component{
     .then(
       response => response.json()
       )
-      .then(response => console.log(response))
-      .then(response => sessionStorage.setItem("data", response))
-      .then(response => console.log(sessionStorage.getItem("data")));
+      .then(response => sessionStorage.setItem("data", JSON.stringify(response)));
   }
     else{
       var canvas = document.getElementById("houseDraw");
